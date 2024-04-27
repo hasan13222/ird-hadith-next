@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#2b9e76",
+      },
+      fontFamily: {
+        sans: "sans-serif",
+      }
+    },
   },
   plugins: [],
 }

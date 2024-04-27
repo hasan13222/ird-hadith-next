@@ -1,3 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: kalpurush;
+  src: url(../font/kalpurush.ttf);
+}
+
+body {
+  font-family: kalpurush;
+}
+
+.sidebar {
+  height: calc(100vh - 106px);
+}
+.mainbar {
+  height: calc(100vh - 80px);
+}
+.mainbar .books{
+  height: calc(100% - 106px);
+}
+.mainbar .hadith__items{
+  height: auto;
+}
+.books, .chapters{
+  height: calc(100% - 144px);
+  width: 100%;
+}
+.books ul li:hover svg, .chapters ul li:hover svg{
+  fill: #2b9e76;
+}
+.books ul li:hover span, .chapters ul li:hover span{
+  color: white;
+}
+
+div::-webkit-scrollbar {
+  width: 5px;
+}
+div::-webkit-scrollbar-track {
+  border-radius: 100px;
+  margin: 5rem 0;
+}
+div:hover::-webkit-scrollbar-thumb{border-radius:100px;background-clip:content-box;background-color:#cccfd2;min-height:80px}
+input[type=range] {
+  -webkit-appearance: none;
+  height: 5px;
+  width: 100%;
+  background: #eee;
+  border-radius: 5px;
+  background-image: linear-gradient(#2b9e76, #2b9e76);
+  background-repeat: no-repeat;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #2b9e76;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+input[type=range]::-moz-range-thumb {
+  background: #2b9e76;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.settings_overlay_wrapper p.font-medium{
+  -webkit-text-stroke: 0.2px;
+}
+button.mode::after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+}
